@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -26,7 +27,7 @@
           </li>
         </ul>
         <a class="navigation-logo" href="index.html">
-          <img class="navigation-logo" src="" alt="Логотип">
+          <img class="navigation-logo" src="img/sedona.svg" width="138" height="70" alt="Логотип">
         </a>
         <ul class="navigation-user">
           <li class="navigation-item">
@@ -53,24 +54,24 @@
     </header>
 
     <main class="main-inner">
-      <header class="inner-header">
-        <h1 class="inner-header-title">Гостиницы Седоны</h1>
-        <ul class="breadcrumbs">
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="index.html">
-              <span class="visually-hidden">
-                Главная
-              </span>
-            </a>
-          </li>
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link">
-              Гостиницы
-            </a>
-          </li>
-        </ul>
-      </header>
-      <section class="catalog-hotels">
+      <section class="catalog-filter">
+        <header class="inner-header">
+          <h1 class="inner-header-title">Гостиницы Седоны</h1>
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href="index.html">
+                <span class="visually-hidden">
+                  Главная
+                </span>
+              </a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link">
+                Гостиницы
+              </a>
+            </li>
+          </ul>
+        </header>
         <h2 class="visually-hidden">Список фильтров</h2>
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
@@ -153,6 +154,8 @@
           <button class="button-blue" type="submit">Применить</button>
           <button class="clear" type="reset">Сбросить</button>
         </form>
+      </section>
+      <section class="catalog-hotels">
         <form class="sorting-type">
           <label class="visually-hidden" for="sorting">Сортировка</label>
           <select class="select-control" id="sorting" name="sorting">
@@ -181,7 +184,7 @@
         <p class="hotels-count">Найдено гостиниц: 38</p>
         <ul class="hotel-card-list">
           <li class="hotel-card">
-            <img class="hotel-card-image" src="" alt="">
+            <img class="hotel-card-image" src="img/catalog/hotel-1.jpg" width="180" height="120" alt="1 запись">
             <h3 class="hotel-card-title">Amara Resort & Spa</h3>
             <span class="hotel-card-type">Гостиница</span>
             <span class="hotel-card-price">От 4000 ₽</span>
@@ -191,7 +194,7 @@
             <span class="hotel-card-rating">Рейтинг: 8,5</span>
           </li>
           <li class="hotel-card">
-            <img class="hotel-card-image" src="" alt="">
+            <img class="hotel-card-image" src="img/catalog/hotel-2.jpg" width="180" height="120" alt="2 запись">
             <h3 class="hotel-card-title">Desert Quail Inn</h3>
             <span class="hotel-card-type">Мотель</span>
             <span class="hotel-card-price">От 3000 ₽</span>
@@ -201,7 +204,7 @@
             <span class="hotel-card-rating">Рейтинг: 8,9</span>
           </li>
           <li class="hotel-card">
-            <img class="hotel-card-image" src="" alt="">
+            <img class="hotel-card-image" src="img/catalog/hotel-3.jpg" width="180" height="120" alt="3 запись">
             <h3 class="hotel-card-title">Villas at Poco Diablo</h3>
             <span class="hotel-card-type">Апартаменты</span>
             <span class="hotel-card-price">От 2000 ₽</span>
@@ -211,7 +214,7 @@
             <span class="hotel-card-rating">Рейтинг: 9,2</span>
           </li>
           <li class="hotel-card">
-            <img class="hotel-card-image" src="" alt="">
+            <img class="hotel-card-image" src="img/catalog/hotel-4.jpg" width="180" height="120" alt="4 запись">
             <h3 class="hotel-card-title">GreenTree Inn</h3>
             <span class="hotel-card-type">Гостиница</span>
             <span class="hotel-card-price">От 3000 ₽</span>
