@@ -14,6 +14,10 @@
     url("../fonts/ptsans-700.woff2") format("woff2");
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
@@ -22,6 +26,48 @@ body {
   color: #000000;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.page-header {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation {
+  display: flex;
+  width: 1057px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  width: 410px;
+  margin-right: 151px;
+}
+
+.navigation-logo {
+  width: 138px;
+  margin-right: 209px;
+}
+
+.navigation-user {
+  width: 250px;
+  margin-left: auto;
+  margin-right: 72px;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .button-blue {
@@ -43,6 +89,11 @@ body {
   font-weight: bold;
   text-decoration: none;
   color: #000000;
+}
+
+.general {
+  margin: 0 auto;
+  width: 720px;
 }
 
 .general-about {
@@ -88,10 +139,24 @@ body {
   color: #FFFFFF;
 }
 
+.reasons-services {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.reasons-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .reasons-list li:nth-child(1) {
   color: #FFFFFF;
   background: #83B3D3;
   text-align: center;
+  width: 1200px;
 }
 
 .reasons-list li:nth-child(2),
@@ -107,6 +172,24 @@ body {
   text-align: center;
 }
 
+.reasons-item {
+  display: flex;
+  align-items: center;
+}
+
+.reasons-item-small {
+  width: 33.3%;
+}
+
+.reasons-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.reasons-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .reasons-title  {
   font-weight: bold;
   font-size: 24px;
@@ -118,6 +201,14 @@ body {
 .reasons-list li:nth-child(3) .reasons-title,
 .reasons-list li:nth-child(4) .reasons-title {
   color: #000000;
+  width: 400px;
+}
+
+.services-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
 }
 
 .services-list li:nth-child(1),
@@ -125,12 +216,14 @@ body {
   color: #333333;
   background: rgba(131, 179, 211, 0.12);
   text-align: center;
+  width: 400px;
 }
 
 .services-list li:nth-child(2) {
   color: #333333;
   background: #FFFFFF;
   text-align: center;
+  width: 400px;
 }
 
 .services-title  {
@@ -143,6 +236,8 @@ body {
 
 .feedback {
   text-align: center;
+  margin: 0 auto;
+  width: 720px;
 }
 
 .feedback-title {
@@ -164,12 +259,25 @@ body {
   border-radius: 10px;
 }
 
+.page-footer-container {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
 .subscribe {
   background: url("../img/mailing.jpg");
-  width: 1200;
+  width: 1200px;
   height: 411;
   text-align: center;
   color: #FFFFFF;
+  margin: 0 auto;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
 }
 
 .subscribe-title {
@@ -182,6 +290,9 @@ body {
 .subscribe-description {
   font-size: 22px;
   line-height: 26px;
+  width: 720px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .subscribe-button {
@@ -189,13 +300,33 @@ body {
   line-height: 26px;
 }
 
+.page-footer-information {
+  display: flex;
+}
+
+.social {
+  width: 160px;
+  margin-left: 72px;
+  margin-right: 60px;
+}
+
+.contact {
+  width: 720px;
+  text-align: center;
+}
+
 .contact-phone {
   font-size: 40px;
   line-height: 40px;
-  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+}
+
+.about {
+  width: 115px;
+  margin-left: 53px;
+  margin-right: 72px;
 }
 
 .inner-header-title {
@@ -203,6 +334,7 @@ body {
   font-size: 60px;
   line-height: 78px;
   color: #FFFFFF;
+  margin-left: 71px;
 }
 
 a.breadcrumbs-link {
@@ -212,11 +344,21 @@ a.breadcrumbs-link {
 
 .catalog-filter {
   background-image: url("../img/catalog-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 1200;
   height: 408;
   color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
 }
 
+.catalog-filter-form {
+  display: flex;
+  flex-direction: row;
+  margin-left: 71px;
+  margin-right: 72px;
+}
 .catalog-filter-title {
   font-weight: bold;
   font-size: 20px;
@@ -236,6 +378,11 @@ a.breadcrumbs-link {
 .select-control {
   line-height: 23px;
   color: #333333;
+  margin-right: 81px;
+}
+
+.catalog-hotels-results {
+  display: flex;
 }
 
 .hotels-count {
@@ -243,6 +390,12 @@ a.breadcrumbs-link {
   font-size: 30px;
   line-height: 39px;
   text-transform: uppercase;
+  margin-left: 71px;
+  margin-right: 192px;
+}
+
+.hotel-card-list {
+  margin-left: 72px;
 }
 
 .hotel-card-title {
