@@ -31,6 +31,18 @@ body {
   min-height: 100%;
 }
 
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .page-header {
   width: 1200px;
   margin: 0 auto;
@@ -38,16 +50,34 @@ body {
 
 .navigation {
   display: flex;
-  width: 1057px;
+  width: 100%;
   margin: 0 auto;
   justify-content: space-between;
 }
 
 .navigation-list {
+  display: flex;
   margin: 0;
-  padding: 0;
-  width: 410px;
   margin-right: 151px;
+  padding: 0;
+  width: 470px;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+
+.navigation-link {
+  display: block;
+  padding: 24px 19px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navigation-user .navigation-link {
+  min-width: 18px;
+  min-height: 18px;
 }
 
 .navigation-logo {
@@ -56,9 +86,11 @@ body {
 }
 
 .navigation-user {
+  display: flex;
   width: 250px;
   margin-left: auto;
   margin-right: 72px;
+  list-style-type: none;
 }
 
 .main-container {
@@ -68,6 +100,25 @@ body {
 .page-container {
   width: 1200px;
   margin: 0 auto;
+}
+
+.logo-background1 {
+  background: url("../img/main-background.jpg") no-repeat;
+  width: 1200px;
+  height: 485px;
+}
+
+.logo-background2 {
+  background: url("../img/welcome.svg") no-repeat;
+  height: 352px;
+  background-position: 50% 50%;
+}
+
+.logo-background3 {
+  background: url("../img/main-background-geometry.png") no-repeat;
+  width: 1200px;
+height: 485px;
+  background-position: bottom;
 }
 
 .button-blue {
@@ -93,7 +144,9 @@ body {
 
 .general {
   margin: 0 auto;
-  width: 720px;
+  margin-top: 63px;
+  margin-bottom: 79px;
+  max-width: 720px;
 }
 
 .general-about {
@@ -102,6 +155,8 @@ body {
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 23px;
 }
 
 .general-description {
@@ -156,7 +211,7 @@ body {
   color: #FFFFFF;
   background: #83B3D3;
   text-align: center;
-  width: 1200px;
+  width: 100%;
 }
 
 .reasons-list li:nth-child(2),
@@ -195,13 +250,24 @@ body {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  margin-top: 98px;
+  margin-bottom: 25px;
+}
+
+.reasons-number {
+  margin-bottom: 26px;
+}
+
+.reasons-description {
+  margin: 0;
+  margin-bottom: 77px;
 }
 
 .reasons-list li:nth-child(2) .reasons-title,
 .reasons-list li:nth-child(3) .reasons-title,
 .reasons-list li:nth-child(4) .reasons-title {
   color: #000000;
-  width: 400px;
+  max-width: 400px;
 }
 
 .services-list {
@@ -216,14 +282,14 @@ body {
   color: #333333;
   background: rgba(131, 179, 211, 0.12);
   text-align: center;
-  width: 400px;
+  width: 33.3%;
 }
 
 .services-list li:nth-child(2) {
   color: #333333;
   background: #FFFFFF;
   text-align: center;
-  width: 400px;
+  width: 33.3%;
 }
 
 .services-title  {
@@ -232,12 +298,20 @@ body {
   line-height: 28px;
   text-transform: uppercase;
   color: #000000;
+  margin-top: 184px;
+  margin-bottom: 20px;
+}
+.services-description {
+  margin: 0;
+  margin-bottom: 79px;
 }
 
 .feedback {
   text-align: center;
   margin: 0 auto;
-  width: 720px;
+  max-width: 720px;
+  margin-top: 91px;
+  margin-bottom: 91px;
 }
 
 .feedback-title {
@@ -245,12 +319,15 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 .feedback-description {
   font-weight: normal;
   font-size: 22px;
   line-height: 26px;
+  margin: 0;
+  margin-bottom: 73px;
 }
 
 .feedback a.button-brown {
@@ -268,11 +345,12 @@ body {
 
 .subscribe {
   background: url("../img/mailing.jpg");
-  width: 1200px;
-  height: 411;
+  width: 100%;
   text-align: center;
   color: #FFFFFF;
   margin: 0 auto;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .subscribe-form {
@@ -285,14 +363,16 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 .subscribe-description {
   font-size: 22px;
   line-height: 26px;
-  width: 720px;
+  max-width: 720px;
   margin: 0 auto;
   text-align: center;
+  margin-bottom: 26px;
 }
 
 .subscribe-button {
@@ -302,17 +382,32 @@ body {
 
 .page-footer-information {
   display: flex;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
 .social {
+  display: flex;
+  flex-wrap: wrap;
   width: 160px;
   margin-left: 72px;
   margin-right: 60px;
 }
 
+.social-list {
+  list-style-type: none;
+}
+
+.social-item {
+  width: 20px;
+  height: 20px;
+  margin-right: 30px;
+}
+
 .contact {
   width: 720px;
   text-align: center;
+  margin-right: 60px;
 }
 
 .contact-phone {
@@ -335,12 +430,27 @@ body {
   line-height: 78px;
   color: #FFFFFF;
   margin-left: 71px;
+  margin-top: 35px;
+  margin-bottom: 5px;
+}
+
+.breadcrumbs {
+  display: flex;
+  margin: 0;
+  margin-left: 73px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.breadcrumbs-link {
+  margin-right: 30px;
 }
 
 a.breadcrumbs-link {
   color: #FFFFFF;
   font-size: 16px;
 }
+
 
 .catalog-filter {
   background-image: url("../img/catalog-background.jpg");
@@ -383,6 +493,13 @@ a.breadcrumbs-link {
 
 .catalog-hotels-results {
   display: flex;
+  margin-left: 71px;
+  margin-bottom: 31px;
+}
+
+.catalog-hotels-results .button {
+  width: 48px;
+  height: 48px;
 }
 
 .hotels-count {
@@ -390,12 +507,19 @@ a.breadcrumbs-link {
   font-size: 30px;
   line-height: 39px;
   text-transform: uppercase;
-  margin-left: 71px;
+
   margin-right: 192px;
 }
 
+.sorting-type {
+  margin-right: 81px;
+}
+
 .hotel-card-list {
+  margin: 0;
   margin-left: 72px;
+  list-style-type: none;
+  padding: 0;
 }
 
 .hotel-card-title {
@@ -425,8 +549,43 @@ a.breadcrumbs-link {
   border-radius: 4px;
 }
 
-.show-more,
+.pagination-container {
+  display: flex;
+  padding: 31px;
+}
+
+.pagination {
+  display: flex;
+  margin: 0;
+  margin-right: 302px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 7px;
+}
+
+.show-more {
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 31px;
+  margin-bottom: 61px;
+  width: 625px;
+  height: 55px;
+  padding: 14px 20px;
+  font-size: 20px;
+  line-height: 26px;
+  text-decoration: none;
+}
+
 .pagination-link {
+  display: block;
+  box-sizing: border-box;
+  width: 55px;
+  height: 55px;
+  padding: 16px 21px;
   font-size: 20px;
   line-height: 26px;
   text-decoration: none;
