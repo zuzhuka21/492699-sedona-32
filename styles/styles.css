@@ -102,23 +102,30 @@ body {
   margin: 0 auto;
 }
 
-.logo-background1 {
-  background: url("../img/main-background.jpg") no-repeat;
-  width: 1200px;
-  height: 485px;
+.intro {
+  background: #8bbcda url("../img/main-background.jpg") 50% 50% no-repeat;
+  background-size: cover;
+  min-height: 485px;
+  padding: 30px 0;
+  position: relative;
+  max-width: 1200px;
 }
 
-.logo-background2 {
-  background: url("../img/welcome.svg") no-repeat;
-  height: 352px;
-  background-position: 50% 50%;
+.intro:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 57px;
+  background: url("../img/main-background-geometry.png") 0 100% no-repeat;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
-.logo-background3 {
-  background: url("../img/main-background-geometry.png") no-repeat;
-  width: 1200px;
-height: 485px;
-  background-position: bottom;
+.intro__text {
+  display: block;
+  margin: 0 auto;
 }
 
 .button-blue {
@@ -507,12 +514,7 @@ a.breadcrumbs-link {
   font-size: 30px;
   line-height: 39px;
   text-transform: uppercase;
-
   margin-right: 192px;
-}
-
-.sorting-type {
-  margin-right: 81px;
 }
 
 .hotel-card-list {
